@@ -1,7 +1,9 @@
 var A = ["H", "Li", "Na", "K"];
 var B = ["F", "Cl", "Br", "I"];
 
-var C = ["O", "S", "Se"];
+
+//ADD CODE
+
 
 var elementsArray = [];
 
@@ -63,27 +65,13 @@ AFRAME.registerComponent("markerhandler", {
       }
 
       if (length === 3) {
-        var marker1 = document.querySelector(`#marker-${elementsArray[0].barcode_value}`);
-
-        var marker2 = document.querySelector(`#marker-${elementsArray[1].barcode_value}`);
-
-        var marker3 = document.querySelector(`#marker-${elementsArray[2].barcode_value}`);
-
-        var distance1 = this.getDistance(marker1, marker2);
-        var distance2 = this.getDistance(marker1, marker3);
-
-        if (distance1 < 1.25 && distance2 < 1.25) {
-
-          if (compound !== undefined) {
-            var barcodeValue = elementsArray[0].barcode_value;
-            this.showCompound(compound, barcodeValue);
-          } else {
-            messageText.setAttribute("visible", true);
-          }
-        }
-        else {
-          messageText.setAttribute("visible", false);
-        }
+    
+        
+        //ADD CODE HERE
+        
+        
+        
+        
       }
     }
   },
@@ -103,13 +91,12 @@ AFRAME.registerComponent("markerhandler", {
             compound += i.element_name;
             return { name: compound, value: el.barcode_value };
           }
-          if (C.includes(i.element_name)) {
-            var count = this.countOccurrences(elementsArray, el.element_name);
-            if (count > 1) {
-              compound += count + i.element_name;
-              return { name: compound, value: i.barcode_value };
-            }
-          }
+         
+          //ADD CODE HERE
+          
+          
+          
+          
         }
       }
     }
